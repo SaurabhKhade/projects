@@ -7,7 +7,7 @@ export default function Head(props) {
       <title>{props.title}</title>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta name="description" content={props.desc} />
       <meta name="robots" content="index, follow" />
       <meta property="og:type" content="Math Calculator" />
@@ -20,6 +20,10 @@ export default function Head(props) {
       <meta name="author" content="Saurabh Khade" />
       
       <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon" />
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <script src="http://cdn.jsdelivr.net/npm/eruda"></script>
+      <script>eruda.init()</script> 
     </NextHead>
   )
 }

@@ -1,0 +1,38 @@
+.container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.box {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.hr {
+  width: 70%;
+}
+
+.social {
+  /* border: 1px solid green; */
+  width: 200px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  /* border: 1px solid white; */
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+.icon:hover {
+  background-color: white;
+  color: var(--primary);
+}

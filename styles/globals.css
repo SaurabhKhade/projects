@@ -28,3 +28,9 @@ h1,h2,h3,p {
   margin: 0;
   padding: 0;
 }
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
