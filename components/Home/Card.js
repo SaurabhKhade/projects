@@ -17,7 +17,7 @@ export default function Card(props) {
     <div className={styles.container} onClick={()=>router.push({pathname:path})}>
       {extraDesc()}
       <h2 className={styles.title}>{title}</h2>
-      <img src={img} alt={title} className={styles.img}/>
+      <img src={`/math-calculator${img}`} alt={title} className={styles.img}/>
       <p className={styles.desc}>{desc}</p>
     </div>
   )
