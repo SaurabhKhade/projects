@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && cd out && touch .nojekyll && git init && git add . && git commit -m 'uploading from termux' && git remote add origin https://github.com/SaurabhKhade/math-calculator.git && git branch gh-pages && git checkout gh-pages && git push origin gh-pages",
+    "build": "next build && next export && cd out && touch .nojekyll && git init && git add . && git commit -m 'uploading from termux' && git remote add origin https://github.com/SaurabhKhade/math-calculator.git && git branch gh-pages && git checkout gh-pages && git push origin gh-pages --force",
     "start": "next start"
   },
   "dependencies": {

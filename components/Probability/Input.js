@@ -1,6 +1,6 @@
 import styles from '../../styles/Probability/BinomialInput.module.css'
 
-export default function Input({values,setValues}) {
+export default function Input({values,setValues,params}) {
   
   function inputHandler(e) {
     let {name,value} = e.target
@@ -11,13 +11,13 @@ export default function Input({values,setValues}) {
   
   return (
     <div className={styles.inputBox}>
-      <div>n</div>
+      <div>{params.a}</div>
       <div >
-        <input type="number" className={styles.input} value={values.n} name="n" onChange={inputHandler}/>
+        <input type="number" className={styles.input} value={values[params.a]} name={params.a} onChange={inputHandler}/>
       </div>
-      <div>p</div>
+      <div>{params.b}</div>
       <div>
-        <input type="number" className={styles.input} value={values.p} name="p" onChange={inputHandler}/>
+        <input type="number" className={styles.input} value={values[params.b]} name={params.b} onChange={inputHandler}/>
       </div>
       <div className={styles.precisionMsg}>
         no of digits after decimal point

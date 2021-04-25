@@ -19,3 +19,10 @@ export function binomialProbability(n,r,p) {
   let failure = Math.pow(1-p,n-r)
   return (combs*success*failure)
 }
+
+export function poissonProbability(m,r) {
+  let exp = Math.exp(-m)
+  let mx = Math.pow(m,r)
+  let xfact = factorial(r)
+  return (exp*mx)/xfact
+}

@@ -1,18 +1,30 @@
 import styles from '../../styles/Probability/BinomialTable.module.css'
-import {binomialProbability} from '../functions'
+import {binomialProbability,poissonProbability} from '../functions'
 
 export default function Table (props) {
-  let {display,n,p,prec} = props
+  let {display,n,p,prec,m} = props
+  let probFunction=()=>{}
   
   let style={
     display: display?'block':'none'
+  }
+  
+  if(m) {
+    probFunction = poissonProbability
+  } else {
+    probFunction = binomialProbability
   }
   
   let rows = () =>{
     let rowArr=[]
     let commulative=0
     for(let i=0; i<=n; i++) {
-      let prob = Number(binomialProbability(n,i,p).toFixed(prec))
+      let prob
+      if(m) {
+        prob = Number(probFunction(m,i).toFixed(prec))
+      } else {
+        prob = Number(probFunction(n,i,p).toFixed(prec))
+      }
       commulative = Number((commulative+prob).toFixed(prec))
       rowArr.push(
         <tr className={styles.row} key={i}>

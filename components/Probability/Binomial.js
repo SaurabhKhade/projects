@@ -1,6 +1,6 @@
 import styles from '../../styles/Probability/Binomial.module.css'
-import Table from './BinomialTable'
-import Input from './BinomialInput'
+import Table from './Table'
+import Input from './Input'
 import Help from './BinomialHelp'
 import {useState} from 'react'
 
@@ -18,7 +18,7 @@ export default function Binomial() {
     if(p>1 || p<0) {
       alert('Value of p should lie between 0 and 1')
     } else if(n<0) {
-      alert('Value of n should be greater than 0')
+      alert('Value of n cannot be less than 0')
     } else if(prec<0) {
       alert("Number of digits after decimal point can't be negative")
     } else if(prec>10) {
@@ -35,7 +35,7 @@ export default function Binomial() {
       Binomial Distribution
     </h2>
     <Help />
-    <Input values={values} setValues={setValues} />
+    <Input values={values} setValues={setValues} params={{a:'n',b:'p'}}/>
     <button className={styles.btn} onClick={calculate}>
       Calculate&nbsp;
       <i className="fa fa-play-circle" />

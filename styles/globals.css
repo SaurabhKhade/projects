@@ -1,5 +1,7 @@
 :root {
   --primary: rgb(35, 47, 62);
+  --blue-dark: hsla(214.6,100%,46%,0.8);
+  --blue-light: hsla(214.6,100%,56%,0.8);
 }
 
 html,
