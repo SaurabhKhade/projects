@@ -1,0 +1,29 @@
+.container {
+  /* border: 1px solid green; */
+  margin: 15px 0;
+  width: 100%;
+  /* overflow-x: scroll; */
+}
+
+.table{
+  border: 1px solid black;
+  width: 100%;
+}
+
+.row > * {
+  border: 1px solid black;
+  text-align: center;
+  height: 40px;
+}
+
+.row:hover {
+  background-color: hsl(0,0%,85%);
+}
+
+.headrow {
+  background-color: hsl(0,0%,85%);
+}
+
+.note{
+  margin: 10px 5px;
+}

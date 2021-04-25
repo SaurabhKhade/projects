@@ -17,5 +17,5 @@ export function binomialProbability(n,r,p) {
   let combs = combinations(n,r)
   let success = Math.pow(p,r)
   let failure = Math.pow(1-p,n-r)
-  return (combs*success*failure).toFixed(6)
+  return (combs*success*failure)
 }
