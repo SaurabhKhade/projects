@@ -1,4 +1,4 @@
-import styles from '../../styles/Probability/BinomialTable.module.css'
+import styles from '../../styles/Probability/Table.module.css'
 import {binomialProbability,poissonProbability} from '../functions'
 
 export default function Table (props) {

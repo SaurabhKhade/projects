@@ -1,4 +1,4 @@
-import styles from '../../styles/Probability/Poisson.module.css'
+import styles from '../../styles/Probability/PoissonAndNormal.module.css'
 import Help from './PoissonHelp'
 import Input from './Input'
 import {useState} from 'react'

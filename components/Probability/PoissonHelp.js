@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import styles from '../../styles/Probability/BinomialHelp.module.css'
+import styles from '../../styles/Probability/Help.module.css'
 
 export default function Help() {
   const [helpExpanded,setHelpExpanded] = useState(false)

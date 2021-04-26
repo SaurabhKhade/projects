@@ -1,4 +1,4 @@
-import styles from '../../styles/Probability/BinomialInput.module.css'
+import styles from '../../styles/Probability/Input.module.css'
 
 export default function Input({values,setValues,params}) {
   

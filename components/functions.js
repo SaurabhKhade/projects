@@ -1,3 +1,5 @@
+import ztable from 'ztable'
+
 function factorial(number) {
   let result=1
   for(let i=1; i<=number; i++) {
@@ -25,4 +27,23 @@ export function poissonProbability(m,r) {
   let mx = Math.pow(m,r)
   let xfact = factorial(r)
   return (exp*mx)/xfact
+}
+
+export function normalProbability(left,right,sd,m,prec) {
+  let prob = 0
+  let rightZ = 0
+  let leftZ = 0
+  if(right !== Infinity) {
+    rightZ = (right-m)/sd
+  } 
+  if(left !== Infinity) {
+    leftZ = (left-m)/sd
+  }
+  if (left===Infinity) {
+    return Number((ztable(rightZ)).toFixed(prec));
+  } else if (right===Infinity) {
+    return Number((1-ztable(leftZ)).toFixed(prec));
+  } else {
+    return Number((ztable(rightZ)-ztable(leftZ)).toFixed(prec));
+  }
 }
