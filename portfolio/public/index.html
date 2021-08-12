@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#919191" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
+    <meta
+    name="description"
+    content="My Portfolio website with my projects, thoughts of my friends and many more"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Milonga&family=Rouge+Script&display=swap" rel="stylesheet">
+    <title>Saurabh Khade</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .loading{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        display: grid;
+        place-items: center;
+        color: white;
+        position: relative;
+      }
+      #loading-name{
+        position: absolute;
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: none;
+      }
+      .loader{
+        width: 8rem;
+        height: 8rem;
+        border: 16px solid black;
+        border-radius: 50%;
+        border-top: 16px solid white;
+        animation: load 1.5s linear infinite;
+      }
+      @keyframes load{
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loading">
+        <p id="loading-name">Loading...</p>
+        <div class="loader"></div>
+      </div>
+      <script>
+        setTimeout(function() {
+            document.getElementById('loading-name').style.display='block';
+        }, 7000);
+      </script>
+    </div>
+</body>
+</html>

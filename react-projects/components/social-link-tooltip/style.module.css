@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Mate+SC&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* variables */
+/* colors */
+/* mixins */
+.container {
+  font-size: 10px;
+  width: 100vw;
+  max-width: 350px;
+  aspect-ratio: 3/4;
+  border: 1px solid black;
+  margin: 10px auto;
+  background: linear-gradient(to right, #ff6431, #ff4c8b);
+}
+
+.iconsBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 10px 0;
+  background-color: #ececec;
+  color: #333333;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  /* cursor: pointer; */
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(239, 62, 76, 0.9);
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+.wrapper:hover {
+  color: #ececec;
+  transform: scale(0.92);
+}
+.wrapper:hover::before {
+  transform: scale(0.85);
+}
+.wrapper:hover::after {
+  font-family: "Mate SC", serif;
+  font-weight: 600;
+  content: attr(data-icon);
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  left: 120%;
+  background-color: #ececec;
+  color: #333333;
+}
+
+.icon {
+  font-size: 4em !important;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=style.module.css.map */

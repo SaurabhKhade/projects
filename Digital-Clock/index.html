@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	<title>Digital Clock</title>
+</head>
+<body>
+	<div class="container">
+		<div class="border">
+			<div>
+				<div class="label">Hour</div>
+				<div class="timeslot" id="hour">00</div>
+			</div>
+			<div>
+				<div class="label">Minute</div>
+				<div class="timeslot" id="minute">00</div>
+			</div>
+			<div>
+				<div class="label">Second</div>
+				<div class="timeslot" id="second">00</div>
+			</div>
+			<div>
+				<div class="label" style="color: rgb(25,25,25)">A</div>
+				<div class="am-pm">
+					<input type="radio" name="am-pm" id="am" disabled=""/>
+					<p>AM</p>
+					<input type="radio" name="am-pm" id="pm" disabled=""/>
+					<p>PM</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="logic.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

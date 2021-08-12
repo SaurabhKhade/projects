@@ -1,0 +1,83 @@
+@import '../variables';
+
+$pink: hsl(338.9,100%,64.9%);
+$orange: rgb(255,100,49);
+$before-color: hsla(355,85%,59%,0.9);
+$transition: all .2s ease;
+$icon-size: 4em;
+$after-font-size: 15px;
+$after-left: 120%;
+
+.container {
+  font-size: 10px;
+  width: 100vw;
+  max-width: 350px;
+  aspect-ratio: 3/4;
+  border: 1px solid black;
+  margin: 10px auto;
+  background: linear-gradient(
+    to right,
+    $orange,
+    $pink
+  );
+}
+
+.iconsBox {
+  @include d-flex-col;
+  border: 1px solid black;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 10px 0;
+  background-color: $white;
+  color: $black;
+  padding: 10px;
+  border-radius: 50%;
+  @include d-flex;
+  justify-content: center;
+  transition: $transition;
+  /* cursor: pointer; */
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: $before-color;
+    transform: scale(0);
+    transition: $transition;
+  }
+  &:hover {
+    color: $white;
+    transform: scale(.92);
+    &::before {
+      transform: scale(.85);
+    }
+    &::after {
+      font-family: $font-mate-sc;
+      font-weight: 600;
+      content: attr(data-icon);
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      border-radius: 1000px;
+      @include d-flex;
+      justify-content: center;
+      font-size: $after-font-size;
+      left: $after-left;
+      background-color: $white;
+      color: $black;
+    }
+  }
+    
+}
+
+.icon {
+  font-size: $icon-size!important;
+  z-index: 10;
+}

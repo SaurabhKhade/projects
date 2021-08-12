@@ -1,0 +1,138 @@
+@use 'sass:math';
+@import 'fonts';
+@import 'colors';
+@import 'typography';
+
+.chat {
+  height: 80px;
+  padding: 10px;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 3.7fr;
+  font-family: $roboto;
+  align-items: center;
+  position: relative;
+  hr {
+    position: absolute;
+    width: math.div(100vw,4.7)*3.5;
+    height: 0;
+    right: 10px;
+    bottom: 0;
+    margin: 0;
+    border: .005px solid $chat-divider;
+    background-color: transparent;
+  }
+}
+
+.dp {
+  height: 93%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  background-color: $dp-grey;
+  border: .5px solid darken($dp-grey,7%);
+  color: $white;
+  font-size: 60px;
+  overflow: hidden;
+  .nodp {
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 80%;
+  color: $black;
+}
+
+.strips {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  font-size: $small;
+  color: $muted;
+  p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.lowerStrip {
+  @extend .strips;
+  p {
+    margin-left: 5px;
+    width: 90%;
+  }
+}
+
+.upperStrip {
+  @extend .strips;
+  justify-content: space-between;
+  p:first-child {
+    color: $black;
+    font-size: $large;
+    letter-spacing: .5px;
+  }
+}
+
+.contacts {
+  position: fixed;
+  z-index: 50;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $tertiary;
+  color: $white;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  box-shadow: 0 .8px 8px lighten(grey,10%);
+  img {
+    width: 55%;
+    height: 55%;
+  }
+}
+
+.contactPage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100vw;
+  background-color: $white;
+  transition: left .2s ease;
+}
+
+.headrow {
+  display: grid;
+  grid-template-columns: 1.5fr 6fr 1fr 1fr;
+  place-items: center;
+  font-size: 26px;
+  padding: 10px 0;
+  background-color: $primary;
+  color: white;
+  div {
+    justify-self: stretch;
+  }
+  p {
+    font-size: $large;
+    margin: 0;
+    &:last-child {
+      font-size: $small;
+      /* font-size: $default; */
+    }
+  }
+}

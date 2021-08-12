@@ -1,0 +1,13 @@
+.git{
+  text-align: center;
+  padding-top: 10px;
+  background-image: linear-gradient(
+    to top right,
+    rgb(22,175,255),
+    rgb(195,249,251)
+  );
+}
+
+.git h1{
+  font-family: 'Milonga', cursive;
+}

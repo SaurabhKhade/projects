@@ -1,0 +1,102 @@
+@use "sass:math";
+@import '../variables';
+
+$blue: hsl(217,90%,60%);
+$border-blue: hsl(230,30%,70%);
+$sky: hsl(220,50%,60%);
+$radius: 10px;
+$height: 45px;
+
+.container {
+  width: 355px;
+  /* border: 1px solid black; */
+  margin: 20px auto;
+  padding: 10px 5px;
+}
+
+.form {
+  width: 330px;
+  height: 400px;
+  margin: auto;
+  font-family: $font-roboto;
+  box-shadow: 0 2px 5px $grey;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 20px 20px;
+  p {
+    margin: 2px 0;
+    font-size: 13px;
+    align-self: flex-end;
+    color: $sky;
+    font-weight: 500;
+  }
+  label {
+    margin: 10px 0 3px 0;
+    font-weight: 600;
+  }
+}
+
+.input {
+  padding: 10px;
+  height: $height;
+  border: 1px solid $grey;
+  font-family: $font-roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: darken($grey,40%);
+  border-radius: math.div($radius,2);
+}
+
+.input::placeholder {
+  font-family: $font-roboto;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.button {
+  height: $height;
+  margin: 20px 0 10px 0;
+  padding: 10px 0;
+  border-radius: math.div($radius,2);
+  border: 1px solid $border-blue;
+  background-color: $blue;
+  font-size: 17px;
+  font-family: $font-roboto;
+  font-weight: 600;
+  color: $white;
+}
+
+.divider {
+  @include d-flex;
+  p {
+    margin: 0 10px;
+    color: $black;
+  }
+  hr {
+    width: 100%;
+    border: .75px solid $grey;
+    background-color: $grey;
+    height: 0;
+  }
+}
+
+.secondary {
+  margin: 10px 0;
+  @include d-flex;
+  height: $height;
+  padding: 10px;
+  border: 1px solid $border-blue;
+  border-radius: math.div($radius,2);
+  justify-content: center;
+  img {
+    width: 30px;
+  }
+  p {
+    color: black;
+    font-weight: 500;
+    font-family: $font-roboto;
+    font-size: 17px;
+    margin-left: 5px;
+  }
+}

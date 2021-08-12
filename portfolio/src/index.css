@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: soft;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a,a:active,a:focus,a:hover {
+  outline: 0
+}
+
+li{
+  list-style: none;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Mate+SC&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* variables */
+$font-roboto: 'Roboto', sans-serif;
+$font-mate-sc: 'Mate SC', serif;
+$font-cinzel: 'Cinzel', serif;
+
+
+/* colors */
+$grey: lighten(hsl(0,0%,50.2%),20%);
+$blue: hsl(240,100%,75%);
+$orange: hsl(38.8,100%,45%);
+$white: rgb(236,236,236);
+$black: rgb(51,51,51);
+
+/* mixins */
+@mixin d-flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin d-flex-col {
+  @include d-flex;
+  flex-direction: column;
+}

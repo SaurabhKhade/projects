@@ -1,0 +1,60 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  text-align: center;
+  color: white;
+  text-shadow: -3px 2px #121212;
+  background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/home-bg.jpg') no-repeat center center/cover fixed;
+}
+
+.home .btn-down {
+  transform: rotate(90deg);
+  padding: 40px 10px;
+  border: 1px solid #ffffff;
+}
+
+.home .btn-link {
+  position: absolute;
+  bottom: 15px;
+}
+
+.home .btn-icon {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+.home p {
+    font-size: 110px;
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: 'Rouge Script', cursive;
+    line-height: 90px;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+    text-shadow: -2px -2px #000;
+    word-wrap: break-word;
+}
+
+.home .btn-contact {
+  padding: 15px 30px;
+  margin: 20px 0;
+  box-shadow: 1px 3px rgba(60,60,60,0.8);
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 1px solid #929292;
+}
+
+.home .btn-contact:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #e4e4e4;
+}
